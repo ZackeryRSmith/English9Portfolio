@@ -1,5 +1,12 @@
+:root {
+  --white-color: #CCC9DC;
+  --sidebar-color: #1B2A41;
+  --sidebar-text-hover: #8A84AE; 
+  --bg-gradient: linear-gradient(-45deg, #0C1821, #1B2A41, #413C58, #0A2342);
+}
+
 a {
-  color: #CCC9DC;
+  color: var(--white-color);
 }
 
 input {
@@ -47,7 +54,7 @@ label .burger .bar, label .burger::after {
   display: block;
   width: 100%;
   height: 12%;
-  background: #CCC9DC;
+  background: var(--white-color);
   content: "";
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -91,7 +98,7 @@ nav::before {
   left: 0;
   z-index: -1;
   width: 25em;
-  background: #1B2A41;
+  background: var(--sidebar-color);
   content: "";
   transform: skewX(15deg) translateX(-100%);
   transform-origin: bottom left;
@@ -107,7 +114,7 @@ nav a {
   margin: 0.5em 0;
   padding: 0.2em 2em;
   font-size: 1.5em;
-  color: #CCC9DC;
+  color: var(--white-color);
   text-decoration: none;
   font-weight: 500;
   transform: translateX(-100%);
@@ -133,7 +140,7 @@ nav a:nth-child(6) {
   transition-delay: 0s, 350ms;
 }
 nav a:hover, nav a:focus {
-  color: #8A84AE;
+  color: var(--sidebar-text-hover);
 }
 
 main {
@@ -196,14 +203,14 @@ main .content {
 /* misc */
 body {
   /* Gradient */
-  background: linear-gradient(-45deg, #0C1821, #1B2A41);
+  background: var(--bg-gradient);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 
   overflow-x: hidden;
   /*background: #020122;*/
-  color: #CCC9DC;
+  color: var(--white-color);
   font: 1em/1.4 "lato";
   padding: 5% 0;
 }
